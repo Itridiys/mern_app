@@ -1,0 +1,6 @@
+{
+  "port": 5000,
+  "jwtSecret": "my super secret string for token",
+  "mongoUri": "mongodb+srv://Nant056:qwerty12345@cluster0.2puze.mongodb.net/app?retryWrites=true&w=majority",
+  "baseUrl": "http://localhost:5000"
+}
