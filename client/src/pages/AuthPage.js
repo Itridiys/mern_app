@@ -61,7 +61,7 @@ export const AuthPage = () =>{
                 <div className="card blue lighten-2">
 
                     <div className="card-content white-text">
-                        <span className="card-title">Авторизация</span>
+                        <span className="card-title">Авторизация хуезация</span>
                         <div>
 
                             <div className="input-field">
