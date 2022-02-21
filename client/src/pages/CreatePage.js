@@ -29,8 +29,29 @@ export const CreatePage = () =>{
         }
     }
 
+    const subButton = async () =>{
+
+        var text = document.getElementById('link');
+        try{
+            const data = await request('/api/link/generate', 'POST', {from: text.value}, {
+                Authorization: `Bearer ${auth.token}`
+            })
+
+            history.push(`/detail/${data.link._id}`)
+
+        }catch (e){
+
+        }
+    }
+
+
+
+
+
+
     return(
         <div className="row">
+
             <div className="col s8 offset-s2" style={{padding: '2rem'}}>
 
                 <div className="input-field">
@@ -43,6 +64,10 @@ export const CreatePage = () =>{
                            onKeyPress={pressHandler}
                     />
                     <label htmlFor="link">Введите ссылку</label>
+
+                    <button className="btn waves-effect waves-light" type="submit" onClick={subButton}>Submit
+                        <i className="material-icons right"></i>
+                    </button>
                 </div>
 
             </div>

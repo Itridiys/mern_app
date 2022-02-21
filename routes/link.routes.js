@@ -15,6 +15,10 @@ router.post('/generate', auth ,async (req,res) => {
         const baseUrl = config.get('baseUrl')
         const {from} = req.body
 
+        if(!{from}){
+            res.status(500).json({ message: 'Empty URL' })
+        }
+
 
         const code = shortid.generate()
 
